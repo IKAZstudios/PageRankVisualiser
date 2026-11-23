@@ -1,0 +1,11 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1795465137
+diagram_editor.gd::GDScript::3927076833846434657::1795465121::0::1::::DiagramEditor<>Control<><>0<>0<><>::
+diagram_editor.tscn::PackedScene::2944256995227524061::1795465121::0::1::::<><><>0<>0<><>::uid://bv7km8il6ajwb::::res://diagram_editor.gd<>uid://bo7dnephjaw5u::::res://edges_layer.gd
+edges_layer.gd::GDScript::3435330182650098584::1795465121::0::1::::EdgesLayer<>Control<><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1795465121::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::8066422390913420197::1795465121::1795465138::1::::<><><>0<>0<>53eeb4132e6d5eeef42f8641bb9541c8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+pageRankIcon.png::CompressedTexture2D::5468569800094361366::1795465121::1795465138::1::::<><><>0<>0<>eff2556fcc7f892149df42e18cff3627<>res://.godot/imported/pageRankIcon.png-3a3ecf04463441e421828cacdb375caa.ctex::
+page_box.gd::GDScript::8415319561494311611::1795465121::0::1::::PageBox<>PanelContainer<><>0<>0<><>::
+page_box.tscn::PackedScene::7761352366096502064::1795465121::0::1::::<><><>0<>0<><>::uid://dr5pc30ei0yvj::::res://page_box.gd
+README.md::TextFile::-1::1795465121::0::1::::<><><>0<>0<><>::
