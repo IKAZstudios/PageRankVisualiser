@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bh7hqn3fa5hbp"]
+
+[ext_resource type="Script" uid="uid://bv7km8il6ajwb" path="res://diagram_editor.gd" id="1_gl5xp"]
+[ext_resource type="Script" uid="uid://bo7dnephjaw5u" path="res://edges_layer.gd" id="2_f42xr"]
+
+[node name="DiagramEditor" type="Control" unique_id=1253722384]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gl5xp")
+
+[node name="Background" type="ColorRect" parent="." unique_id=367174201]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.23529412, 0.4627451, 1)
+
+[node name="GraphCanvas" type="Control" parent="." unique_id=1853759613]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="EdgesLayer" type="Control" parent="GraphCanvas" unique_id=148746445]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_f42xr")
+
+[node name="NodesContainer" type="Control" parent="GraphCanvas" unique_id=1698160618]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TopBar" type="HBoxContainer" parent="." unique_id=833357074]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="AddPageButton" type="Button" parent="TopBar" unique_id=128640432]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "+ Add Page"
+
+[node name="VSeparator" type="VSeparator" parent="TopBar" unique_id=772926112]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Zoom" type="Label" parent="TopBar" unique_id=1521118089]
+layout_mode = 2
+text = "Zoom"
+
+[node name="ZoomOutButton" type="Button" parent="TopBar" unique_id=1623839842]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "-"
+
+[node name="ZoomLabel" type="Label" parent="TopBar" unique_id=104254246]
+layout_mode = 2
+text = "100%"
+
+[node name="ZoomInButton" type="Button" parent="TopBar" unique_id=1637451578]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "+"
+
+[node name="ResetViewButton" type="Button" parent="TopBar" unique_id=935593503]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Reset View"
+
+[node name="VSeparator2" type="VSeparator" parent="TopBar" unique_id=1449673317]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopBar" unique_id=310918259]
+layout_mode = 2
+text = "Iterations:"
+
+[node name="IterationsSpinBox" type="SpinBox" parent="TopBar" unique_id=512947911]
+layout_mode = 2
+value = 5.0
+rounded = true
+alignment = 1
+
+[node name="VSeparator3" type="VSeparator" parent="TopBar" unique_id=1361885504]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TopBar" unique_id=1394438757]
+layout_mode = 2
+text = "Damping factor:"
+
+[node name="DampingSpinBox" type="SpinBox" parent="TopBar" unique_id=207106297]
+layout_mode = 2
+tooltip_text = "Low value: More random jumping, links impact score less.
+High value: Link following impact score more."
+max_value = 1.0
+step = 0.01
+value = 0.85
+alignment = 1
+
+[node name="Credit" type="Label" parent="." unique_id=2112127414]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(10, -10)
+text = "PageRank Visualiser by Zaki Kheir"

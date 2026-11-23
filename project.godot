@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PageRank Visualiser"
+config/description="Allows simple visualisation of Larry Page's PageRank algorithm with an interactive editor."
+config/version="1.0.0"
+run/main_scene="uid://bh7hqn3fa5hbp"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0.101960786, 0.23529412, 0.4627451, 1)
+boot_splash/image="uid://cj6ass02ymlv7"
+config/icon="uid://cj6ass02ymlv7"
+
+[display]
+
+window/energy_saving/keep_screen_on=false
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+window/ios/allow_high_refresh_rate=false
+window/ios/hide_home_indicator=false
+window/ios/suppress_ui_gesture=false
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

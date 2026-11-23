@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://ditwlsqtivwge"]
+
+[ext_resource type="Script" uid="uid://dr5pc30ei0yvj" path="res://page_box.gd" id="1_jpos7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpos7"]
+bg_color = Color(0.1494745, 0.14947453, 0.14947447, 0.8117647)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enspa"]
+bg_color = Color(0.14117648, 0.65882355, 0.20392157, 0.5176471)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="PageBox" type="PanelContainer" unique_id=337913125]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -39.0
+offset_right = 84.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jpos7")
+
+[node name="PageRankBar" type="ProgressBar" parent="." unique_id=71605202]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_jpos7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_enspa")
+max_value = 1.0
+step = 0.001
+value = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1806555406]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=480348741]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=209989720]
+layout_mode = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1577833032]
+layout_mode = 2
+
+[node name="IdLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HeaderRow" unique_id=489908242]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Page 1"
+vertical_alignment = 1
+
+[node name="OrdinalRankLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HeaderRow" unique_id=1273296482]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.39244866, 0.7269564, 0.9670839, 1)
+text = "1st"
+
+[node name="PageRankLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HeaderRow" unique_id=1838464640]
+layout_mode = 2
+text = "1.000"
+
+[node name="DeleteButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HeaderRow" unique_id=204179661]
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 10
+tooltip_text = "Delete Page"
+text = "X"
+
+[node name="TitleEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1057339178]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+placeholder_text = "/page-url"
+
+[node name="LinkPort" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=377897292]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Drag to link to another page"
