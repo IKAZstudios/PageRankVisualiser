@@ -1,4 +1,4 @@
-# PageRankVisualiser
+# PageRank Visualiser
 <img width="1108" height="624" alt="image" src="https://github.com/user-attachments/assets/49ea85e6-614c-472d-a73a-8c606da2df54" />
 An interactive visualiser for the PageRank algorithm (invented by Larry Page) made using Godot 4.
 Do not expect updates.
