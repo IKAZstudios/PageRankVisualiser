@@ -3,6 +3,10 @@
 An interactive visualiser for the PageRank algorithm (invented by Larry Page) made using Godot 4.
 Do not expect updates.
 
+# Try in your browser!!
+**Click this link:**
+https://ikazstudios.github.io/PageRankVisualiser/
+
 # Features
 - Interactive link editor
 - Panning and zoom
